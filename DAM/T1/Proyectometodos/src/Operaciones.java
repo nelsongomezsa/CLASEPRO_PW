@@ -1,13 +1,38 @@
-public class Operaciones {
+import model.Operaciones;
 
-    public static void sumar(int op1, int op2) {
-        int resultado = op1 + op2;
-        System.out.println("el resultado de la suma es " + resultado);
-    }
-    //ojo al poner privado o publico o protected cambia mucho probar si no te acuerdas
+public class Entrada {
 
-    protected void restar(int op1, int op2) {
-        int resultado = op1 - op2;
-        System.out.println("el resultado de la resta es " + resultado);
+    public static void main(String[] args) {
+        System.out.println("Proyecto metodos");
+        System.out.println("Vamos a realizar llamadas a metodos");
+        /*
+        String data="Laura";
+        saludar(data);
+        despedir();
+        data = "Borja";
+        System.out.println();
+        saludar(data);
+        despedir();*/
+        int numero;
+        Operaciones operacionesMatematicas = new Operaciones();
+        operacionesMatematicas.sumar(1, 4);
+        operacionesMatematicas.sumar(2, 4);
+        operacionesMatematicas.restar(8, 5);
+        operacionesMatematicas.restar(8, 9);
+        operacionesMatematicas.multiplicar(7, 3);
     }
+
+
+    public static void saludar(String nombre) {
+        System.out.println("Hola " + nombre);
+        System.out.println("Encantado de saludarte, vamos a practicar");
+        System.out.println("Vamos a practicar el llamado de metodos");
+        System.out.println("Vamos, a por el día");
+    }
+
+    public static void despedir() {
+        System.out.println("A cerrar el portatil, a pasar la tarde a casa");
+    }
+
+
 }
